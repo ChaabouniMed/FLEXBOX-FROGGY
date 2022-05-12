@@ -82,7 +82,7 @@ areatxt2.addEventListener('keypress', (e) =>{
     document.querySelector('.reponse').classList.remove('changeparent');
     val2=(areatxt2.value + e.key).toLowerCase().trim().replace(/ /g,"");
     console.log(val2);
-    if ((val2 =='align-items:end') || (val2 =='align-items:end;')){
+    if ((val2 =='align-items:end') || (val2 =='align-items:end;') || (val2 =='align-items:flex-end') || (val2 =='align-items:flex-end;')){
         pirate1.classList.add('vrai2');
         pirate2.classList.add('vrai2');
         pirate3.classList.add('vrai2');
@@ -101,7 +101,9 @@ areatxt2.addEventListener('keypress', (e) =>{
         bounton.getAttribute('disabled');
         bounton.classList.remove('change');
         if(!((areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:end') 
-        || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:end;'))){
+        || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:end;')
+        || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:flex-end;')
+        || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:flex-end'))){
             pirate1.classList.remove('vrai2');
             pirate2.classList.remove('vrai2');
             pirate3.classList.remove('vrai2');
@@ -115,7 +117,9 @@ areatxt2.addEventListener('keypress', (e) =>{
         pirate2.classList.add('vrai1fr2');
         pirate3.classList.add('vrai1fr3');
         if((areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:end;') 
-        || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:end')){
+        || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:end')
+        || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:flex-end')
+        || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:flex-end;')){
             bounton.removeAttribute('disabled');
             bounton.classList.add('change');
         }
@@ -148,12 +152,13 @@ else{
             && 
             (
                 (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:end;') || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:end')
+                || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:flex-end') || (areatxt.value.toLowerCase().trim().replace(/ /g,"") =='align-items:flex-end;')
             )
         )
         ||
             (
                 (
-                    (val2 =='align-items:end') || (val2 =='align-items:end;')
+                    (val2 =='align-items:end') || (val2 =='align-items:end;') || (val2 =='align-items:flex-end;') || (val2 =='align-items:flex-end')
                 ) 
                 && 
                 (
